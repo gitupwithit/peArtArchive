@@ -29,6 +29,7 @@
 }
 
 #scrollingImages.active {
+	display: inline;
 	float: right;
 	cursor: grabbing;
 	cursor: -webkit-grabbing;
