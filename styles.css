@@ -11,7 +11,7 @@
 	border: 3px solid rgb(12, 1, 172);
 	width: 98vw; /* x dimension of user screen */
 	height: 500px;
-	overflow-x: hidden;
+	overflow-x: scroll;
 	overflow-y: hidden;
 	white-space: nowrap;
 	-webkit-overflow scrolling: touch;
