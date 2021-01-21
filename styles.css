@@ -29,6 +29,7 @@
 	float: right;
 	cursor: grabbing;
 	cursor: -webkit-grabbing;
+	-webkit-overflow scrolling: touch;
 	margin: 0px;
 	transition: all 0s;
 	transform: scale(.98);
