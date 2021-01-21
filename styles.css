@@ -13,12 +13,15 @@
 	height: 500px;
 	overflow-x: hidden;
 	overflow-y: hidden;
+	white-space: nowrap;
+	-webkit-overflow scrolling: touch;
 	cursor: grab;
 	margin: 0px;
 	transition: all 0s;
 }
 
 #scrollingImagesInner {
+	display: inline;
 	width: 10000px; /* dimension of all images */
 	height: 500px;
 	margin: 0px;
@@ -29,7 +32,6 @@
 	float: right;
 	cursor: grabbing;
 	cursor: -webkit-grabbing;
-	-webkit-overflow scrolling: touch;
 	margin: 0px;
 	transition: all 0s;
 	transform: scale(.98);
