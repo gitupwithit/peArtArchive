@@ -28,6 +28,7 @@
 #scrollingImages.active {
 	float: right;
 	cursor: grabbing;
+	cursor: -webkit-grabbing;
 	margin: 0px;
 	transition: all 0s;
 	transform: scale(.98);
