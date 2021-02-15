@@ -15,14 +15,14 @@
 	margin: auto;
 	width: 50%;
 	width: 96vw; /* x dimension of user screen */
-	height: 64px;}
+	height: 10vh;}
 
 .map.active {
 	margin: auto;
 	z-index: 2;
 	width: 50%;
 	width: 96vw; /* x dimension of user screen */
-	height: 64px;
+	height: 10vh;
 	cursor: col-resize;}
 
 .mapHandle {
@@ -46,7 +46,8 @@
 	border: 3px solid rgb(12, 1, 172);
 	width: 98vw; /* x dimension of user screen */
 	height: 500px;
-	overflow: hidden;
+	overflow-y: hidden;
+	overflow-x: auto;
 	white-space: nowrap;
 	cursor: grab;
 	margin: 0px;
