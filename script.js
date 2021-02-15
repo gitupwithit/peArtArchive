@@ -1,49 +1,56 @@
-
-
-/*
-ideas: 
-
-scroll wheel for zoom?
-minimap at top for quick navigation?
-top-down for navigation?
-
-*/
-
-document.getElementById("scrollPosition").innerHTML = scrollX;
-
+var mouseIsDown = false;
+var mouseIsDownX;
+var windowWidth;
+var windowPercent;
+const totalImageWidth = 8700;
 const scroller = document.getElementById('scrollingImages');
-var scrollX;
-var startX;
-var endX;
-var movement;
-var mouseIsDown = true;
+const map = document.getElementById('map');
+const handle = document.getElementById('mapHandle');
 
-addEventListener('mousedown', mouseDown);
+map.addEventListener('mousedown', mouseOnMap);
+map.addEventListener('mousemove', mouseMoveOnMap);
+scroller.addEventListener('mousedown', mouseOnScroll);
+scroller.addEventListener('mousemove', mouseMoveOnScroll);
 addEventListener('mouseup', mouseUp);
-addEventListener('mousemove', mouseMove);
 
-function mouseDown(e) {
+function mouseOnMap(e) {
+  console.log('mouse down on map at ' + e.pageX);
   mouseIsDown = true;
+  windowWidth = window.innerWidth;
+  windowPercent = e.pageX / windowWidth;
+  scroller.scrollLeft = windowPercent * totalImageWidth;
+  handle.style.left = e.pageX - (.025 * windowWidth) + 'px';
   e.preventDefault();
-  scroller.classList.add('active');
-  console.log("mouse down at " + e.pageX);
-  startX = e.pageX;
-}
+  map.classList.add('active');
+  handle.classList.add('active');
+  document.getElementById("scrollPosition").innerHTML = scroller.scrollLeft;}
+
+function mouseMoveOnMap(e) {
+  if (mouseIsDown == true) {
+    console.log('mouse position is ' + e.pageX);
+    windowWidth = window.innerWidth;
+    windowPercent = e.pageX / windowWidth;
+    scroller.scrollLeft = 1.05 * windowPercent * totalImageWidth;
+    handle.style.left = e.pageX - (.025 * windowWidth) + 'px';
+    document.getElementById("scrollPosition").innerHTML = scroller.scrollLeft;}}
+
+function mouseOnScroll(e) {
+  mouseIsDown = true;
+  mouseIsDownX = e.pageX;
+  e.preventDefault();
+  scroller.classList.add('active');}
+
+function mouseMoveOnScroll(e) {
+  if (mouseIsDown == true) {
+    scroller.scrollLeft += (mouseIsDownX - e.pageX)/20;
+    handle.style.left = scroller.scrollLeft / totalImageWidth * windowWidth + 'px';
+    document.getElementById("scrollPosition").innerHTML = scroller.scrollLeft;}}
 
 function mouseUp(e) {
   mouseIsDown = false;
   scroller.classList.remove('active');
-  console.log("mouse up at " + e.pageX);
-  
- // scroller.scrollLeft -= (endX - startX);
-}
+  map.classList.remove('active');
+  handle.classList.remove('active');
+  console.log("mouse up at " + e.pageX);} 
 
-function mouseMove(e) {
-  if (mouseIsDown == false) {
-    return;
-  }
-  endX = e.pageX;
-  scroller.scrollLeft -= (endX - startX)/3;
-  scrollX = scroller.scrollLeft;
-  document.getElementById("scrollPosition").innerHTML = scrollX;
-}
+document.getElementById("scrollPosition").innerHTML = scroller.scrollLeft;

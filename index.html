@@ -1,53 +1,86 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Horizontal Grab and Scroll 4</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>PE Art Archive w Map</title>
+  <link rel="stylesheet" href="style.css">
+
   </head>
 <html> 
 <style>
+  /*
   body {
-    background-image: url('images/pe_bg.jpg');
+    background-image: url('https://raw.githubusercontent.com/gitupwithit/peArtArchive/main/images/pe_bg.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;  
     background-size: cover;
   }
-
+*/
 </style>
 
-<body> 
+<body>
+ 
+  <div id="map" class="map">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h1.png?raw=true" alt="House 1" class="miniHouse">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h2.png?raw=true" alt="House 2" class="miniHouse">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h3.png?raw=true" alt="House 3" class="miniHouse">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h4.png?raw=true" alt="House 4" class="miniHouse">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h5.png?raw=true" alt="House 5" class="miniHouse">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h1.png?raw=true" alt="House 1" class="miniHouse">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h2.png?raw=true" alt="House 2" class="miniHouse">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h3.png?raw=true" alt="House 3" class="miniHouse">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h4.png?raw=true" alt="House 4" class="miniHouse">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h5.png?raw=true" alt="House 5" class="miniHouse">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h1.png?raw=true" alt="House 1" class="miniHouse">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h2.png?raw=true" alt="House 2" class="miniHouse">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h3.png?raw=true" alt="House 3" class="miniHouse">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h4.png?raw=true" alt="House 4" class="miniHouse">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h5.png?raw=true" alt="House 5" class="miniHouse">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h1.png?raw=true" alt="House 1" class="miniHouse">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h2.png?raw=true" alt="House 2" class="miniHouse">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h3.png?raw=true" alt="House 3" class="miniHouse">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h4.png?raw=true" alt="House 4" class="miniHouse">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h5.png?raw=true" alt="House 5" class="miniHouse">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h1.png?raw=true" alt="House 1" class="miniHouse">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h2.png?raw=true" alt="House 2" class="miniHouse">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h3.png?raw=true" alt="House 3" class="miniHouse">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h4.png?raw=true" alt="House 4" class="miniHouse">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h5.png?raw=true" alt="House 5" class="miniHouse">
+   
+    <div id="mapHandle" class="mapHandle"> </div>
+  </div>
+  
   <div class="header">
   <p>Click and drag horizontally .. scroll position is <span id="scrollPosition"></span></p>
   </div>
 
-<div id="scrollingImages">
+  <div id="scrollingImages" class="scrollingImages">
   <div id="scrollingImagesInner">
-    <img src="images/h1.png" alt="House 1" height="500px">
-    <img src="images/h2.png" alt="House 2" height="500px">
-    <img src="images/h3.png" alt="House 3" height="500px">
-    <img src="images/h4.png" alt="House 4" height="500px">
-    <img src="images/h5.png" alt="House 5" height="500px">
-    <img src="images/h1.png" alt="House 1" height="500px">
-    <img src="images/h2.png" alt="House 2" height="500px">
-    <img src="images/h3.png" alt="House 3" height="500px">
-    <img src="images/h4.png" alt="House 4" height="500px">
-    <img src="images/h5.png" alt="House 5" height="500px">
-    <img src="images/h1.png" alt="House 1" height="500px">
-    <img src="images/h2.png" alt="House 2" height="500px">
-    <img src="images/h3.png" alt="House 3" height="500px">
-    <img src="images/h4.png" alt="House 4" height="500px">
-    <img src="images/h5.png" alt="House 5" height="500px">
-    <img src="images/h1.png" alt="House 1" height="500px">
-    <img src="images/h2.png" alt="House 2" height="500px">
-    <img src="images/h3.png" alt="House 3" height="500px">
-    <img src="images/h4.png" alt="House 4" height="500px">
-    <img src="images/h5.png" alt="House 5" height="500px">
-    <img src="images/h1.png" alt="House 1" height="500px">
-    <img src="images/h2.png" alt="House 2" height="500px">
-    <img src="images/h3.png" alt="House 3" height="500px">
-    <img src="images/h4.png" alt="House 4" height="500px">
-    <img src="images/h5.png" alt="House 5" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h1.png?raw=true" alt="House 1" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h2.png?raw=true" alt="House 2" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h3.png?raw=true" alt="House 3" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h4.png?raw=true" alt="House 4" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h5.png?raw=true" alt="House 5" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h1.png?raw=true" alt="House 1" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h2.png?raw=true" alt="House 2" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h3.png?raw=true" alt="House 3" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h4.png?raw=true" alt="House 4" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h5.png?raw=true" alt="House 5" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h1.png?raw=true" alt="House 1" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h2.png?raw=true" alt="House 2" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h3.png?raw=true" alt="House 3" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h4.png?raw=true" alt="House 4" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h5.png?raw=true" alt="House 5" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h1.png?raw=true" alt="House 1" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h2.png?raw=true" alt="House 2" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h3.png?raw=true" alt="House 3" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h4.png?raw=true" alt="House 4" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h5.png?raw=true" alt="House 5" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h1.png?raw=true" alt="House 1" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h2.png?raw=true" alt="House 2" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h3.png?raw=true" alt="House 3" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h4.png?raw=true" alt="House 4" height="500px">
+    <img src="https://github.com/gitupwithit/peArtArchive/blob/rev1/images/h5.png?raw=true" alt="House 5" height="500px">
 
   </div>
 </div>

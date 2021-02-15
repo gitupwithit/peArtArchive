@@ -1,0 +1,70 @@
+* {
+	box-sizing: border-box;}
+
+.header {
+	text-align: center;}
+
+.miniHouse {
+	height: 5vw;
+	width: 3.8vw;
+}
+
+.map {
+	font-size:0;
+	z-index: 2;
+	margin: auto;
+	width: 50%;
+	width: 96vw; /* x dimension of user screen */
+	height: 64px;}
+
+.map.active {
+	margin: auto;
+	z-index: 2;
+	width: 50%;
+	width: 96vw; /* x dimension of user screen */
+	height: 64px;
+	cursor: col-resize;}
+
+.mapHandle {
+	position: relative;
+	top: -70px;
+	z-index: 1;
+	width: 6vw; /* x dimension of user screen */
+	height: 74px;
+	border: 2px solid rgb(81, 128, 81);}
+
+.mapHandle.active {
+	position: relative;
+	top: -74px;
+	z-index: 1;
+	width: 7vw; /* x dimension of user screen */
+	height: 78px;
+	border: 2px solid rgb(81, 128, 81);}
+
+.scrollingImages {
+	float: left; 
+	border: 3px solid rgb(12, 1, 172);
+	width: 98vw; /* x dimension of user screen */
+	height: 500px;
+	overflow: hidden;
+	white-space: nowrap;
+	cursor: grab;
+	margin: 0px;
+	transition: all 0s;
+	-webkit-overflow scrolling: touch;}
+
+.scrollingImages.active {
+	display: inline;
+	float: right;
+	cursor: grabbing;
+	cursor: -webkit-grabbing; 
+	margin: 0px;
+	transition: all 0s;
+	transform: scale(.98);}
+
+#scrollingImagesInner {
+	display: inline;
+	width: 10000px; /* dimension of all images */
+	height: 500px;
+	margin: 0px;
+	font-size:0; /* removes inline spacing */}
