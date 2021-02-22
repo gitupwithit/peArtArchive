@@ -26,8 +26,8 @@
 	cursor: col-resize;}
 
 .mapHandle {
-	position: relative;
-	top: -70px;
+	position: absolute;
+	top: 0px;
 	z-index: 1;
 	width: 6vw; /* x dimension of user screen */
 	height: 74px;
