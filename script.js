@@ -12,11 +12,15 @@ top-down for navigation?
 document.getElementById("scrollPosition").innerHTML = scrollX;
 
 const scroller = document.getElementById('scrollingImages');
+const map = document.getElementById('map');
+const handle = document.getElementById('mapHandle');
 var scrollX;
 var startX;
 var endX;
 var movement;
-var mouseIsDown = true;
+var mouseIsDown = false;
+var windowWidth;
+var windowPercent;
 
 addEventListener('mousedown', mouseDown);
 addEventListener('mouseup', mouseUp);
