@@ -22,9 +22,11 @@ var mouseIsDown = false;
 var windowWidth;
 var windowPercent;
 
-addEventListener('mousedown', mouseDown);
+scroller.addEventListener('mousedown', mouseDown);
 addEventListener('mouseup', mouseUp);
 addEventListener('mousemove', mouseMove);
+
+map.addEventListener('mousedown', mouseDown);
 
 window.onload = function() {
   map.addEventListener('touchmove', function(e) {
