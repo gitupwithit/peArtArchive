@@ -13,6 +13,18 @@ scroller.addEventListener('mousedown', mouseOnScroll);
 scroller.addEventListener('mousemove', mouseMoveOnScroll);
 addEventListener('mouseup', mouseUp);
 
+window.onload = function() {
+  map.addEventListener('touchmove', function(e) {
+  var touch = e.targetTouches[0];
+  e.preventDefault();
+  mapHandle.style.left = touch.pageX + 'px';
+  windowWidth = window.innerWidth;
+  windowPercent = toch.pageX / windowWidth;
+  scroller.scrollLeft = windowPercent * totalImageWidth;
+//   console.log(touch.pageX + ' - ' + touch.pageY);
+}, false);
+}
+
 function mouseOnMap(e) {
   console.log('mouse down on map at ' + e.pageX);
   mouseIsDown = true;
