@@ -31,15 +31,15 @@
 
 .mapHandle {
 	position: absolute;
-	top: 0px;
+	top: 2vh;
 	z-index: 3;
 	width: 3vw; /* x dimension of user screen */
 	height: 6px;
 	border: 2px solid rgb(81, 128, 81);}
 
 .mapHandle.active {
-	position: relative;
-	top: -74px;
+	position: absolute;
+	top: 2vh;
 	z-index: 3;
 	width: 7vw; /* x dimension of user screen */
 	height: 5vh;
