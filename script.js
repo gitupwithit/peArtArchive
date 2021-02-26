@@ -2,7 +2,7 @@ var mouseIsDown = false;
 var mouseIsDownX;
 var windowWidth;
 var windowPercent;
-const totalImageWidth = 8700;
+const totalImageWidth = 64000;
 const scroller = document.getElementById('scrollingImages');
 const map = document.getElementById('map');
 const handle = document.getElementById('mapHandle');
