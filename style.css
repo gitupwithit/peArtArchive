@@ -70,7 +70,7 @@
 
 #scrollingImagesInner {
 	display: inline;
-	width: 10000px; /* dimension of all images */
+	width: 64000px; /* dimension of all images */
 	height: 500px;
 	margin: 0px;
 	font-size:0; /* removes inline spacing */}
