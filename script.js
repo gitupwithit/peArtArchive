@@ -3,8 +3,6 @@
 /*
 ideas: 
 
-scroll wheel for zoom?
-minimap at top for quick navigation?
 top-down for navigation?
 
 */
