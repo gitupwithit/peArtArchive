@@ -6,7 +6,7 @@
 
 .miniHouse {
 	height: 1vw;
-	width: .5vw;
+	width: .55vw;
 }
 
 .bigHouse {
@@ -18,7 +18,7 @@
 	z-index: 2;
 	margin: auto;
 	width: 50%;
-	width: 96vw; /* x dimension of user screen */
+	width: 98vw; /* x dimension of user screen */
 	height: 10vh;}
 
 .map.active {
