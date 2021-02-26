@@ -26,12 +26,12 @@
 	z-index: 2;
 	width: 50%;
 	width: 98vw; /* x dimension of user screen */
-	height: 5vh;
+	height: 2vh;
 	cursor: col-resize;}
 
 .mapHandle {
 	position: absolute;
-	top: 2vh;
+	top: 1vh;
 	z-index: 3;
 	width: 3vw; /* x dimension of user screen */
 	height: 6px;
@@ -39,10 +39,10 @@
 
 .mapHandle.active {
 	position: absolute;
-	top: 2vh;
+	top: 1vh;
 	z-index: 3;
-	width: 7vw; /* x dimension of user screen */
-	height: 5vh;
+	width: 3vw; /* x dimension of user screen */
+	height: 2vh;
 	border: 2px solid rgb(81, 128, 81);}
 
 .scrollingImages {
