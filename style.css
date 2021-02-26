@@ -6,7 +6,7 @@
 
 .miniHouse {
 	height: 1vw;
-	width: .55vw;
+	width: .52vw;
 }
 
 .bigHouse {
@@ -25,7 +25,7 @@
 	margin: auto;
 	z-index: 2;
 	width: 50%;
-	width: 96vw; /* x dimension of user screen */
+	width: 97.5vw; /* x dimension of user screen */
 	height: 10vh;
 	cursor: col-resize;}
 
