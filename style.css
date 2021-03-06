@@ -34,7 +34,7 @@
 	top: 1vh;
 	z-index: 3;
 	width: 3vw; /* x dimension of user screen */
-	height: 6px;
+	height: 2vh;
 	border: 2px solid rgb(81, 128, 81);}
 
 .mapHandle.active {
