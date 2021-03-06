@@ -34,16 +34,16 @@
 	top: 1vh;
 	z-index: 3;
 	width: 3vw; /* x dimension of user screen */
-	height: 2.2vh;
-	border: 2px solid rgb(5, 5, 200);}
+	height: 2.5vh;
+	border: 2px solid rgb(12, 1, 172);}
 
 .mapHandle.active {
 	position: absolute;
 	top: 1vh;
 	z-index: 3;
 	width: 3vw; /* x dimension of user screen */
-	height: 2.2vh;
-	border: 2px solid rgb(5, 5, 200);}
+	height: 2.5vh;
+	border: 2px solid rgb(12, 1, 172);}
 
 .scrollingImages {
 	float: left; 
