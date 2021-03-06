@@ -35,7 +35,7 @@
 	z-index: 3;
 	width: 3vw; /* x dimension of user screen */
 	height: 2.2vh;
-	border: 2px solid rgb(81, 128, 81);}
+	border: 2px solid rgb(5, 5, 200);}
 
 .mapHandle.active {
 	position: absolute;
@@ -43,7 +43,7 @@
 	z-index: 3;
 	width: 3vw; /* x dimension of user screen */
 	height: 2.2vh;
-	border: 2px solid rgb(81, 128, 81);}
+	border: 2px solid rgb(5, 5, 200);}
 
 .scrollingImages {
 	float: left; 
