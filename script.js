@@ -36,7 +36,7 @@ function mouseOnMap(e) {
   windowWidth = window.innerWidth;
   windowPercent = e.pageX / windowWidth;
   scroller.scrollLeft = windowPercent * totalImageWidth;
-  handle.style.left = e.pageX - (.025 * windowWidth) + 'px';
+  handle.style.left = e.pageX - (.02 * windowWidth) + 'px';
   e.preventDefault();
   map.classList.add('active');
   handle.classList.add('active');
