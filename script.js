@@ -48,7 +48,7 @@ function mouseMoveOnMap(e) {
     windowWidth = window.innerWidth;
     windowPercent = e.pageX / windowWidth;
     scroller.scrollLeft = 1.05 * windowPercent * totalImageWidth;
-    handle.style.left = e.pageX - (.025 * windowWidth) + 'px';
+    handle.style.left = e.pageX - (.02 * windowWidth) + 'px';
     document.getElementById("scrollPosition").innerHTML = scroller.scrollLeft;}}
 
 function mouseOnScroll(e) {
