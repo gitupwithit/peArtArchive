@@ -7,19 +7,16 @@
 .miniHouse {
 	height: 2vh;
 	width: .485vw;
-	font-size:0; /* removes inline spacing */}
 }
 
 .bigHouse {
-	height: 500px;
+
 }
 
 .map {
 	font-size:0;
 	z-index: 2;
 	margin: auto;
-	width: 50%;
-	width: 98vw; /* x dimension of user screen */
 	height: 5vh;}
 
 .map.active {
@@ -50,7 +47,6 @@
 	float: left; 
 	border: 3px solid rgb(12, 1, 172);
 	width: 98vw; /* x dimension of user screen */
-	height: 500px;
 	overflow-y: hidden;
 	overflow-x: auto;
 	white-space: nowrap;
@@ -71,6 +67,5 @@
 #scrollingImagesInner {
 	display: inline;
 	width: 64000px; /* dimension of all images */
-	height: 500px;
 	margin: 0px;
 	font-size:0; /* removes inline spacing */}
