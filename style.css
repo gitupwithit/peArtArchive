@@ -7,6 +7,7 @@
 .miniHouse {
 	height: 2vh;
 	width: .485vw;
+	font-size:0; /* removes inline spacing */
 }
 
 .bigHouse {
@@ -28,14 +29,6 @@
 	cursor: col-resize;}
 
 .mapHandle {
-	position: absolute;
-	top: 1vh;
-	z-index: 3;
-	width: 3vw; /* x dimension of user screen */
-	height: 2.5vh;
-	border: 2px solid rgb(12, 1, 172);}
-
-.mapHandle.active {
 	position: absolute;
 	top: 1vh;
 	z-index: 3;
