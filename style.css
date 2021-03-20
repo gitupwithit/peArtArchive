@@ -2,8 +2,7 @@
 	box-sizing: border-box;}
 
 .header {
-	text-align: center;
-	height: 2vh;}
+	text-align: center;}
 
 .miniHouse {
 	height: 2vh;
@@ -19,7 +18,7 @@
 	font-size:0;
 	z-index: 2;
 	margin: auto;
-	height: 5vh;}
+	height: 2.1vh;}
 
 .map.active {
 	cursor: col-resize;}
