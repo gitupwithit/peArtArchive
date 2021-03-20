@@ -7,6 +7,7 @@ const scroller = document.getElementById('scrollingImages');
 const map = document.getElementById('map');
 const handle = document.getElementById('mapHandle');
 
+map.addEventListener('mouseover', mouseOver);
 map.addEventListener('mousedown', mouseOnMap);
 map.addEventListener('mousemove', mouseMoveOnMap);
 scroller.addEventListener('mousedown', mouseOnScroll);
@@ -19,10 +20,14 @@ window.onload = function() {
   e.preventDefault();
   mapHandle.style.left = touch.pageX + 'px';
   windowWidth = window.innerWidth;
-  windowPercent = toch.pageX / windowWidth;
+  windowPercent = touch.pageX / windowWidth;
   scroller.scrollLeft = windowPercent * totalImageWidth;
 //   console.log(touch.pageX + ' - ' + touch.pageY);
 }, false);
+}
+
+function mouseOver() {
+  map.classList.add('active');
 }
 
 function mouseOnMap(e) {
