@@ -77,6 +77,7 @@ function mouseUp(e) {
   scroller.classList.remove('active');
   map.classList.remove('active');
   handle.classList.remove('active');
-//  console.log("mouse up at " + e.pageX);} 
+//  console.log("mouse up at " + e.pageX);
+} 
 
 document.getElementById("scrollPosition").innerHTML = scroller.scrollLeft;
