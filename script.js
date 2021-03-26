@@ -13,7 +13,7 @@ const handle = document.getElementById('mapHandle');
 
 map.addEventListener('mouseover', mouseOver);
 map.addEventListener('mousedown', mouseOnMap);
-map.addEventListener('mousemove', mouseMoveOnMap);
+// map.addEventListener('mousemove', mouseMoveOnMap);
 scroller.addEventListener('mousedown', mouseOnScroll);
 scroller.addEventListener('mousemove', mouseMoveOnScroll);
 addEventListener('mouseup', mouseUp);
