@@ -53,6 +53,20 @@ function mouseOnMap(e) {
   document.getElementById("scrollPosition").innerHTML = scroller.scrollLeft;}
 
 // -- updates even when mouse is moving off map until mouseUp event -- //
+
+function moveMap(e) {
+  if (clickedOnMap == true) {
+    windowWidth = window.innerWidth;
+    windowPercent = e.pageX / windowWidth;
+      handle.style.left = e.pageX - (.02 * windowWidth) + 'px';
+  e.preventDefault();
+  map.classList.add('active');
+  handle.classList.add('active');
+    scroller.scrollLeft = 1.05 * windowPercent * totalImageWidth;
+//    handle.style.left = e.pageX - (.02 * windowWidth) + 'px';
+    document.getElementById("scrollPosition").innerHTML = scroller.scrollLeft;}}
+
+/*
 function moveMap(e) {
   if (clickedOnMap == true) {
     windowWidth = window.innerWidth;
@@ -60,7 +74,7 @@ function moveMap(e) {
     scroller.scrollLeft = 1.05 * windowPercent * totalImageWidth;
     handle.style.left = e.pageX - (.02 * windowWidth) + 'px';
     document.getElementById("scrollPosition").innerHTML = scroller.scrollLeft;}}
-
+*/
 /*
 function mouseMoveOnMap(e) {
   if (clickedOnMap == true) {
