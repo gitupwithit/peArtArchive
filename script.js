@@ -2,10 +2,14 @@ var mouseIsDown = false;
 var mouseIsDownX;
 var windowWidth;
 var windowPercent;
-const totalImageWidth = 64000;
+var clickedOnMap = false;
+const totalImageWidth = 78000;
 const scroller = document.getElementById('scrollingImages');
 const map = document.getElementById('map');
 const handle = document.getElementById('mapHandle');
+
+// "map" = mini map at top of screen
+// "scroll = main house viewing area
 
 map.addEventListener('mouseover', mouseOver);
 map.addEventListener('mousedown', mouseOnMap);
@@ -14,6 +18,7 @@ scroller.addEventListener('mousedown', mouseOnScroll);
 scroller.addEventListener('mousemove', mouseMoveOnScroll);
 addEventListener('mouseup', mouseUp);
 
+// -- for touch screens -- //
 window.onload = function() {
   map.addEventListener('touchmove', function(e) {
   var touch = e.targetTouches[0];
@@ -26,13 +31,15 @@ window.onload = function() {
 }, false);
 }
 
+// -- changes cursor on map -- //
 function mouseOver() {
   map.classList.add('active');
 }
 
 function mouseOnMap(e) {
-  console.log('mouse down on map at ' + e.pageX);
+//  console.log('mouse down on map at ' + e.pageX);
   mouseIsDown = true;
+  clickedonMap = true;
   windowWidth = window.innerWidth;
   windowPercent = e.pageX / windowWidth;
   scroller.scrollLeft = windowPercent * totalImageWidth;
@@ -42,9 +49,10 @@ function mouseOnMap(e) {
   handle.classList.add('active');
   document.getElementById("scrollPosition").innerHTML = scroller.scrollLeft;}
 
+// -- needs to update even when mouse is moving off map until mouseUp event -- //
 function mouseMoveOnMap(e) {
-  if (mouseIsDown == true) {
-    console.log('mouse position is ' + e.pageX);
+  if (clickedOnMap == true) {
+//    console.log('mouse position is ' + e.pageX);
     windowWidth = window.innerWidth;
     windowPercent = e.pageX / windowWidth;
     scroller.scrollLeft = 1.05 * windowPercent * totalImageWidth;
@@ -65,9 +73,10 @@ function mouseMoveOnScroll(e) {
 
 function mouseUp(e) {
   mouseIsDown = false;
+  clickedOnMap = false;
   scroller.classList.remove('active');
   map.classList.remove('active');
   handle.classList.remove('active');
-  console.log("mouse up at " + e.pageX);} 
+//  console.log("mouse up at " + e.pageX);} 
 
 document.getElementById("scrollPosition").innerHTML = scroller.scrollLeft;
