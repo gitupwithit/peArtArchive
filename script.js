@@ -60,10 +60,8 @@ function moveMap(e) {
     scroller.scrollLeft = 1.05 * windowPercent * totalImageWidth;
     handle.style.left = e.pageX - (.02 * windowWidth) + 'px';
     document.getElementById("scrollPosition").innerHTML = scroller.scrollLeft;}}
-}
 
 /*
-
 function mouseMoveOnMap(e) {
   if (clickedOnMap == true) {
 //    console.log('mouse position is ' + e.pageX);
