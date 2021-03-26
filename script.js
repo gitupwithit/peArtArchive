@@ -17,6 +17,7 @@ map.addEventListener('mousemove', mouseMoveOnMap);
 scroller.addEventListener('mousedown', mouseOnScroll);
 scroller.addEventListener('mousemove', mouseMoveOnScroll);
 addEventListener('mouseup', mouseUp);
+addEventListener('mousemove', moveMap);
 
 // -- for touch screens -- //
 window.onload = function() {
@@ -36,6 +37,8 @@ function mouseOver() {
   map.classList.add('active');
 }
 
+
+
 function mouseOnMap(e) {
 //  console.log('mouse down on map at ' + e.pageX);
   mouseIsDown = true;
@@ -49,7 +52,18 @@ function mouseOnMap(e) {
   handle.classList.add('active');
   document.getElementById("scrollPosition").innerHTML = scroller.scrollLeft;}
 
-// -- needs to update even when mouse is moving off map until mouseUp event -- //
+// -- updates even when mouse is moving off map until mouseUp event -- //
+function moveMap(e) {
+  if (clickedOnMap == true) {
+    windowWidth = window.innerWidth;
+    windowPercent = e.pageX / windowWidth;
+    scroller.scrollLeft = 1.05 * windowPercent * totalImageWidth;
+    handle.style.left = e.pageX - (.02 * windowWidth) + 'px';
+    document.getElementById("scrollPosition").innerHTML = scroller.scrollLeft;}}
+}
+
+/*
+
 function mouseMoveOnMap(e) {
   if (clickedOnMap == true) {
 //    console.log('mouse position is ' + e.pageX);
@@ -58,6 +72,7 @@ function mouseMoveOnMap(e) {
     scroller.scrollLeft = 1.05 * windowPercent * totalImageWidth;
     handle.style.left = e.pageX - (.02 * windowWidth) + 'px';
     document.getElementById("scrollPosition").innerHTML = scroller.scrollLeft;}}
+*/
 
 function mouseOnScroll(e) {
   mouseIsDown = true;
