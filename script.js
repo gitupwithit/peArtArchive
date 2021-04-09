@@ -88,6 +88,7 @@ function mouseMoveOnMap(e) {
 
 function mouseOnScroll(e) {
   mouseIsDown = true;
+  console.log("mouse on scroll")
   mouseIsDownX = e.pageX;
   e.preventDefault();
   scroller.classList.add('active');}
