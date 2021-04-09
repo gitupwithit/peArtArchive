@@ -40,7 +40,7 @@ function mouseOver() {
 
 
 function mouseOnMap(e) {
-//  console.log('mouse down on map at ' + e.pageX);
+  console.log('mouse down on map at ' + e.pageX);
   mouseIsDown = true;
   clickedonMap = true;
   windowWidth = window.innerWidth;
@@ -87,8 +87,7 @@ function mouseMoveOnMap(e) {
 */
 
 function mouseOnScroll(e) {
-  mouseIsDown = true;
-  console.log("mouse on scroll")
+  mouseIsDown = true
   mouseIsDownX = e.pageX;
   e.preventDefault();
   scroller.classList.add('active');}
