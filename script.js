@@ -13,7 +13,7 @@ const handle = document.getElementById('mapHandle');
 
 map.addEventListener('mouseover', mouseOver);
 map.addEventListener('mousedown', mouseOnMap);
-// map.addEventListener('mousemove', mouseMoveOnMap);
+map.addEventListener('mousemove', mouseMoveOnMap);
 scroller.addEventListener('mousedown', mouseOnScroll);
 scroller.addEventListener('mousemove', mouseMoveOnScroll);
 addEventListener('mouseup', mouseUp);
@@ -40,7 +40,7 @@ function mouseOver() {
 
 
 function mouseOnMap(e) {
-  console.log('mouse down on map at ' + e.pageX);
+//  console.log('mouse down on map at ' + e.pageX);
   mouseIsDown = true;
   clickedonMap = true;
   windowWidth = window.innerWidth;
@@ -75,16 +75,16 @@ function moveMap(e) {
     handle.style.left = e.pageX - (.02 * windowWidth) + 'px';
     document.getElementById("scrollPosition").innerHTML = scroller.scrollLeft;}}
 */
-/*
+
 function mouseMoveOnMap(e) {
   if (clickedOnMap == true) {
-//    console.log('mouse position is ' + e.pageX);
+    console.log('mouse position is ' + e.pageX);
     windowWidth = window.innerWidth;
     windowPercent = e.pageX / windowWidth;
     scroller.scrollLeft = 1.05 * windowPercent * totalImageWidth;
     handle.style.left = e.pageX - (.02 * windowWidth) + 'px';
     document.getElementById("scrollPosition").innerHTML = scroller.scrollLeft;}}
-*/
+
 
 function mouseOnScroll(e) {
   mouseIsDown = true
