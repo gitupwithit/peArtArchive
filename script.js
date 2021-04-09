@@ -19,6 +19,7 @@ scroller.addEventListener('mousemove', mouseMoveOnScroll);
 addEventListener('mouseup', mouseUp);
 addEventListener('mousemove', moveMap);
 
+/*
 // -- for touch screens -- //
 window.onload = function() {
   map.addEventListener('touchmove', function(e) {
@@ -31,6 +32,7 @@ window.onload = function() {
 //   console.log(touch.pageX + ' - ' + touch.pageY);
 }, false);
 }
+*/
 
 // -- changes cursor on map -- //
 function mouseOver() {
