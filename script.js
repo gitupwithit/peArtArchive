@@ -33,6 +33,7 @@ window.onload = function() {
   windowWidth = window.innerWidth;
   windowPercent = touch.pageX / windowWidth;
   scroller.scrollLeft = windowPercent * totalImageWidth;
+  document.getElementById("scrollPosition").innerHTML = scroller.scrollLeft;
 //   console.log(touch.pageX + ' - ' + touch.pageY);
 }, false);
 }
