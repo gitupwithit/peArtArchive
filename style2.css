@@ -1,39 +1,61 @@
 * {
-	box-sizing: border-box;
-}
-//
+	box-sizing: border-box;}
+
 .header {
-	text-align: center; 
-}
+	text-align: center;}
 
-#scrollingImages {
-	float: left;
-	border: 3px solid rgb(12, 1, 172);
-	width: 98vw; /* x dimension of user screen */
-	height: 500px;
-	overflow-x: scroll;
-	overflow-y: hidden;
-	white-space: nowrap;
-	-webkit-overflow scrolling: touch;
-	cursor: grab;
-	margin: 0px;
-	transition: all 0s;
-}
-
-#scrollingImagesInner {
-	display: inline;
-	width: 10000px; /* dimension of all images */
-	height: 500px;
-	margin: 0px;
+.miniHouse {
+	height: 2vh;
+	width: .485vw;
 	font-size:0; /* removes inline spacing */
 }
 
-#scrollingImages.active {
+.bigHouse {
+	height: 500px;
+}
+
+.map {
+	font-size:0;
+	z-index: 2;
+	margin: auto;
+  width: 100vw;
+	height: 2.1vh;}
+
+.map.active {
+	cursor: col-resize;}
+
+.mapHandle {
+ position: absolute; 
+	top: 1vh;
+	z-index: 3;
+	width: 3vw; /* x dimension of user screen */
+	height: 2.5vh;
+	border: 2px solid rgb(12, 1, 172);}
+
+.scrollingImages {
+	float: left; 
+	border: 3px solid rgb(12, 1, 172);
+	width: 98vw; /* x dimension of user screen */
+	overflow-y: hidden;
+	overflow-x: auto;
+	white-space: nowrap;
+	cursor: grab;
+	margin: 0px;
+	transition: all 0s;
+	
+-webkit-overflow scrolling: touch;}
+
+.scrollingImages.active {
 	display: inline;
 	float: right;
 	cursor: grabbing;
-	cursor: -webkit-grabbing;
+	cursor: -webkit-grabbing; 
 	margin: 0px;
 	transition: all 0s;
-	transform: scale(.98);
-}
+	-webkit-overflow scrolling: touch;}
+
+#scrollingImagesInner {
+	display: inline;
+	width: 64000px; /* dimension of all images */
+	margin: 0px;
+	font-size:0; /* removes inline spacing */}
