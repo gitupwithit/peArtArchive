@@ -29,7 +29,7 @@ window.onload = function() {
   map.addEventListener('touchmove', function(e) {
   var touch = e.targetTouches[0];
   e.preventDefault();
-  mapHandle.style.left = touch.pageX + 'px';
+  handle.style.left = touch.pageX + 'px';
   windowWidth = window.innerWidth;
   windowPercent = touch.pageX / windowWidth;
   scroller.scrollLeft = windowPercent * totalImageWidth;
